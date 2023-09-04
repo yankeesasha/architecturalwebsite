@@ -1,0 +1,38 @@
+.brands {
+   position: relative;
+
+   &__logo {
+      display: block;
+      max-width: 30%;
+      margin: auto;
+
+      @include respond(tab-port) {
+         max-width: 60%;
+      }
+   }
+
+   &__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+
+      &:hover {
+         color: $color-primary;
+         transition: all 0.1s ease;
+      }
+
+      &--l {
+         left: 0;
+      }
+
+      &--r {
+         right: 0;
+      }
+   }
+}
+
+.owl-nav {
+   width: 0;
+   height: 0;
+}

@@ -1,0 +1,104 @@
+body {
+   font-family: 'Raleway', sans-serif;
+   font-weight: 400;
+   line-height: 1.7;
+   font-size: 1.4rem;
+   color: $color-grey;
+}
+
+.heading-primary {
+   color: $color-white;
+
+   &--main {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      font-weight: 400;
+      font-style: italic;
+   }
+
+   &--sub {
+      display: block;
+      font-size: 2.4rem;
+      font-weight: 100;
+   }
+}
+
+.heading-secondary {
+   font-size: 3.2rem;
+   font-family: 'Playfair Display', serif;
+   color: $color-black;
+   font-style: italic;
+   font-weight: 400;
+
+   &--white {
+      color: $color-white;
+   }
+
+   &__divider {
+      content: "";
+      position: relative;
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-style: italic;
+      font-weight: 200;
+      max-width: 13%;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+
+      @include respond(tab-port) {
+         max-width: 40%;
+      }
+
+      &::after,
+      &::before {
+         position: absolute;
+         content: "";
+         display: block;
+         height: 0.1rem;
+         width: 4.5rem;
+         top: 50%;
+      }
+
+      &::after {
+         right: 0;
+      }
+
+      &::before {
+         left: 0;
+      }
+
+      &--white {
+         color: $color-white;
+
+         &::after,
+         &::before {
+            background-color: $color-white;
+         }
+      }
+
+      &--black {
+         color: $color-black;
+
+         &::after,
+         &::before {
+            background-color: $color-black;
+         }
+      }
+   }
+}
+
+.heading-tertiary {
+   font-weight: 700;
+   font-size: 1.8rem;
+   color: $color-black;
+}
+
+.stripe-p {
+   font-size: 2rem;
+   color: $color-grey-text;
+   font-family: 'Playfair Display', serif;
+   text-align: center;
+   letter-spacing: 2px;
+}
